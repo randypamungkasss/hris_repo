@@ -8,5 +8,5 @@ class Departement(BaseModel):
     is_active = models.BooleanField(default=True)
 
 class DepartementMember(BaseModel):
-    departemnet = models.ForeignKey(Departement, on_delete=models.CASCADE)
+    departement = models.ForeignKey(Departement, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
